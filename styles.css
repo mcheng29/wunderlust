@@ -1,0 +1,553 @@
+/* Michelle Cheng */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'Fira Sans', 'Molle', 'Montserrat' sans-serif;
+    font-family: 'Molle', cursive;
+    font-family: 'Montserrat', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,800;1,100;1,200;1,400;1,500;1,600;1,800;1,900&family=Molle&family=Montserrat&display=swap');
+}
+
+/*---global styles---*/
+:root {
+    --fonts3: 'Fira Sans', sans-serif;
+    --fonts: 'Molle', cursive;
+    --fonts2: 'Montserrat', sans-serif;
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue:  #499BD2;
+    --darkgray: #222222;
+    --lightgray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+
+}
+
+* { 
+    box-sizing: border-box;
+    line-height: 1.35;
+}
+
+/*--skip link--*/
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+#skip:focus{
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+/*--body--*/
+body {
+    font-family: var(--fonts2);
+    color: var(--blue);
+    box-sizing: border-box;
+}
+
+/*---header---*/
+
+header {
+    width: 100%;
+    padding: 1rem;
+    border-bottom:3px solid #F7CE3E;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+header div {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 0.5rem;
+    align-items: center;
+}
+
+#logo {
+    padding: 0.5rem;
+}
+
+/*--heading--*/
+
+h1 {
+    font-family: var(--fonts);
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: var(--fonts);
+    font-size: 3rem;
+    margin: 1rem;
+    padding-top: 0.25rem;
+}
+
+h3 {
+    font-family: var(--fonts);
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+h2, h3 {
+    text-align: left;
+    font-weight: bold;
+}
+
+/*---hidden content---*/
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+/*--nav--*/
+nav {
+
+    width: 100%;
+}
+
+nav a {
+    text-decoration:none;
+    padding: 2rem;
+    background-color: var(--blue);
+    color: var(--black);
+    border: solid 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+}
+
+nav li {
+    list-style:none;
+}
+
+#menu-toggle {
+    background-color: var(--black);
+    grid-column: 1/-1;
+    color: var(--white);
+    text-decoration:none;
+    text-align: center;
+    display: block;
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+    
+}
+
+/*--link--*/
+a {
+    display: block;
+    
+}
+
+/*---main---*/
+main{
+    width: calc(100% - 2rem);
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 1rem;
+    color: var(--black);
+  }
+
+#plan {
+    background-color: var(--yellow);
+    max-width: 1200px;
+
+}
+#plan img {
+    background-color: var(--teal);
+    padding: 2rem;
+    border: solid var(--white);
+    border-radius: 0.5rem;
+
+}
+#plan h4 {
+    color: var(--black);
+    width: fit-content;
+    margin: 0.5rem auto;
+    font-weight: bold;
+    
+}
+#plan a {
+    line-height: 1.35;
+    max-width: 75ch;
+    padding: 0.5rem 0;
+    margin: 0 auto;
+  }
+
+
+/*---text---*/
+p {
+    line-height: 1.50;
+    max-width: 75ch;
+    padding: 1rem 0;
+    margin: 0 auto;
+    color: var(--black);
+}
+
+/*---image---*/
+#img-grid {
+    display: grid;
+    position: relative;
+    margin: 0 auto;
+    padding: 7px;
+  }
+
+/*--testimonials--*/
+#testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: .5rem;
+}
+
+#testimonials h4 {
+    font-size: 2rem;
+    font-family: var(--fonts2);
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+}
+#testimonials q {
+    font-style: italic;
+    font-variant: inherit;
+}
+
+/*--about your destination--*/
+#about {
+    background-color: #499BD2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#about img {
+    display: block;
+}
+#about h3 {
+    font-size: 3rem;
+}
+#about h4 {
+    font-size: 2rem;
+    font-family: var(--fonts2);
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+}
+#about p {
+    font-size: 1.5rem;
+}
+
+/*--contact us--*/
+
+#contact span {
+    font-family: var(--fonts3);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+#contact label {
+    color: var(--black);
+}
+input[type="email"],
+input[type="tel"],
+input[type="text"] {
+  border: 2px solid var(--purple);
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+input[type="radio"] {
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+fieldset,
+input,
+label,
+textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+#selects
+
+#names {
+    font-variant-caps: all-small-caps;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#destination {
+    color: var(--purple);
+}
+input[type="submit"] {
+    border: 2px solid var(--purple);
+    background-color: var(--purple);
+}
+input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+/*--footer--*/
+footer {
+    background-color: var(--lightgray);
+    grid-column: 1/-1;
+    align-items: center;
+}
+
+footer a {
+    color: var(--black);
+}
+
+/*-----mobile screen------*/
+
+@media screen (min-width: 320px) {
+    header div {
+        grid-template-columns: 1fr 4fr;
+        align-items: start;
+        grid-column-gap: 1rem; 
+    }
+    body {
+        background: var(--white);
+    }
+}
+
+h1{
+    font-size: 3rem;
+  }
+nav {
+    grid-column: 1/-1;
+    width: 100%;
+
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+#menu-toggle {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+}
+#about h2, #about p {
+    grid-column: -span/1;
+}
+#about img {
+    display: block;
+    width: 75%;
+    max-width: 200px;
+}
+#testimonials {
+    display: block;
+}
+#testimonials h4 {
+    font-size: 2rem;
+    font-family: var(--fonts2);
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+}
+#testimonials q {
+    font-style: italic;
+
+}
+
+/*-----medium screen------*/
+@media screen and (min-width:650px) {
+    
+}
+h1{
+    font-size: 5rem;
+  }
+h2 {
+    font-size: 4rem;
+}
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: .5rem;
+
+}
+nav ul{
+    display: inline;
+    list-style-position: inherit
+}
+#menu-toggle {
+    display: inline;
+    grid-template-columns: 1fr;
+}
+
+img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+}
+#about h2, #about p {
+    grid-column: -span/1;
+}
+#about img {
+    display: block;
+    width: 75%;
+    max-width: 200px;
+}
+#testimonials {
+    display: block;
+}
+#testimonials h4 {
+    font-size: 2rem;
+    font-family: var(--fonts2);
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+}
+#testimonials q {
+    font-style: italic;
+
+}
+#plan {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+#plan img {
+    width: 30vw;
+}
+#plan a {
+    grid-row: 1/-1;
+}
+
+
+/*-----large screen------*/
+@media screen and (min-width: 1200px){
+    header div{
+      display: inline-flex;
+      grid-template-columns: 1fr 3fr 3fr;
+      grid-gap: 0rem;
+    }
+
+}
+
+h1{
+    font-size: 5rem;
+  }
+h2 {
+    font-size: 4rem;
+}
+nav {
+    grid-column: 1/-1;
+    width: 100%;
+
+}
+nav ul{
+    display: inline;
+    grid-template-columns: 1fr;
+    
+}
+#menu-toggle {
+    display: inline;
+    grid-template-columns: 1fr;
+}
+
+img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+}
+#about h2, #about p {
+    grid-column: -span/1;
+}
+#about img {
+    display: block;
+    width: 75%;
+    max-width: 200px;
+}
+#testimonials {
+    display: block;
+}
+#testimonials h4 {
+    font-size: 2rem;
+    font-family: var(--fonts2);
+    font-weight: bold;
+    font-variant-caps: all-petite-caps;
+}
+#testimonials q {
+    font-style: italic;
+}
