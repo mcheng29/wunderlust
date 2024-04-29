@@ -25,6 +25,29 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 * {
   box-sizing: border-box;
@@ -86,10 +109,11 @@ header div {
 }
 #menu-toggle label { 
   display: block;
-  font-size: 20px;
+  background-color: var(--black);
+  font-size: 18px;
   cursor: pointer;
   padding: 7px 10px;
-  background-color: #f6d64a;
+  
 }
 
 #menu-toggle ul {
@@ -128,7 +152,7 @@ h4, p, q, small, nav, button, form {
 }
 
 
-
+/*---menu---*/
 
 nav a {
   text-decoration:none;
@@ -158,7 +182,7 @@ nav li {
 }
 
 
-/*---main---*/
+/*---plan trip---*/
 
 #plan {
   background-color: var(--yellow);
@@ -173,6 +197,11 @@ nav li {
   align-items: center;
   position: relative;
   width: fit-content;
+}
+#plan h3 {
+  font-size: 40px;
+  text-align: left;
+
 }
 #plan h4 {
   color: var(--black);
@@ -317,8 +346,9 @@ footer a {
 
   }
 
-  #menu-toggle {
-    display: block;
+  #menu-toggle label {
+    display: none;
+
   }
 
   nav ul {
@@ -327,9 +357,6 @@ footer a {
     grid-gap: .5rem;
   }
 
-#sr-only.menu-toggle {
-    display: none;
-  }
 
 #plan img {
     background-color: var(--teal);
