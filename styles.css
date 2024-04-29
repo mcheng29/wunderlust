@@ -270,7 +270,7 @@ footer a {
   color: var(--black);
 }
 
-================
+
 <!---small screen ----->
 
 @media screen and (min-width: 500px) {    
@@ -317,6 +317,22 @@ footer a {
     width: fit-content;
     margin-left: 3rem;
 }
+#testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: .5rem;
+}
+
+#testimonials h3 {
+  font-size: 2rem;
+  font-family: var(--fonts2);
+  font-weight: bold;
+  font-variant-caps: all-petite-caps;
+}
+#testimonials q {
+  font-style: italic;
+  font-variant: inherit;
+}
 #about {
   background-color: #499BD2;
   display: grid;
@@ -347,6 +363,25 @@ footer a {
 
 
 @media screen and (min-width: 750px){
+  header div {
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    grid-column-gap: 1rem;
+  } 
+
+  .nav a {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: solid 1px;
+    color: var(--black);
+    font-family: var(--fonts);
+    background-color: var(--light-gray);
+
+  }
   h1{
     margin-left: 3rem;
   }
@@ -378,6 +413,24 @@ footer a {
 
 
 @media screen and (min-width: 1200px){
+  header div {
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    grid-column-gap: 1rem;
+  } 
+
+  .nav li {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border: solid 1px;
+    color: var(--black);
+    font-family: var(--fonts);
+
+  }
   h1{
     margin-left: 3rem;
   }
