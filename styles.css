@@ -89,7 +89,7 @@ header {
   width: 100%;
   padding: 1rem;
   display:grid;
-  grid-template-columns:1fr 1fr;
+  background-image: linear-gradient(to bottom, var(--blue), var(--white));
 }
 
 header div {
@@ -110,24 +110,24 @@ header div {
 #menu-toggle label { 
   display: block;
   background-color: var(--black);
-  font-size: 18px;
+  font-size: 20px;
+  padding: 5px 10px;
   cursor: pointer;
-  padding: 7px 10px;
-  
+
 }
 
 #menu-toggle ul {
   display: none;
-  color: #000000;
+  color: var(--black);
   list-style-type: none;
-  background-color: #55bcd5;
+  background-color: var(--blue);
 }
 
 #menu-toggle li a {
   display: block;
   font-size: 10px;
   padding: 10px 10px;
-  color: #000000;
+  color: var(--black);
   text-transform: uppercase;
 }
 
@@ -137,6 +137,12 @@ header div {
 #logo {
   padding: 0.5rem;
   display: inline-block;
+}
+#intro picture {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 30px;
 }
 
 /*--heading--*/
@@ -187,6 +193,9 @@ nav li {
 #plan {
   background-color: var(--yellow);
   align-items: center;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 2;
   
 }
 #plan img {
@@ -201,7 +210,9 @@ nav li {
 #plan h3 {
   font-size: 40px;
   text-align: left;
-
+  grid-row: 1;
+  grid-column: 1;
+  font-size: 35px;
 }
 #plan h4 {
   color: var(--black);
@@ -210,7 +221,10 @@ nav li {
   font-weight: bold;
   
 }
-
+#plan div section img {
+  height: 90%;
+  width: 90%;
+}
 
 
 /*---text---*/
@@ -231,9 +245,10 @@ p {
 }
 
 /*---image---*/
-.img-grid {
-  display: grid;
-  position: relative;
+img {
+  display: block;
+  height: 0 auto;
+  max-width: 100%;
 }
 
 
@@ -259,7 +274,7 @@ p {
 
 /*--about--*/
 #about {
-  background-color: #499BD2;
+  background-color: var(--blue);
 
 }
 
@@ -385,7 +400,7 @@ footer a {
   font-variant: inherit;
 }
 #about {
-  background-color: #499BD2;
+  background-color: var(--blue);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   
@@ -438,7 +453,7 @@ footer a {
   }
 
   #about {
-    background-color: #499BD2;
+    background-color: var(--blue);
     display: inline-block;
   }
   #about section {
@@ -489,7 +504,7 @@ footer a {
   }
 
   #about {
-    background-color: #499BD2;
+    background-color: var(--blue);
     display: inline-block;
     grid-template-columns: 1fr 1fr;
   }
